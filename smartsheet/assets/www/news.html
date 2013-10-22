@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            news
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery-ui-map/jquery.ui.map.full.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/childbrowser.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="news" id="news" class="type-interior"
+        data-theme="b" data-add-back-btn="true" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader"
+            id="news_mobileheader" class=' news_mobileheader '>
+                <h1 dsid="mobileheader">
+                    News
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="news_mobilecontainer" name="mobilecontainer" class=" news_mobilecontainer"
+            dsid="mobilecontainer" data-theme="">
+                <link href="news.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="news.js">
+                </script>
+                <!-- mobilelist_1 -->
+                <ul data-role="listview" id="news_mobilelist_1" class=' news_mobilelist_1 ' name="mobilelist_1"
+                dsid="mobilelist_1" data-inset="true" data-theme="b" data-divider-theme="b" data-count-theme="b"
+                style="">
+                    <!-- mobilelistitem_2 -->
+                    <li class=' news_mobilelistitem_2 '>
+                        <a id="news_mobilelistitem_2" name="mobilelistitem_2" dsid="mobilelistitem_2" tabIndex="1"
+                        class=' news_mobilelistitem_2 '>
+                        <h3>Smartsheet Adds Android App</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_4 -->
+                    <li class=' news_mobilelistitem_4 '>
+                        <a id="news_mobilelistitem_4" name="mobilelistitem_4" dsid="mobilelistitem_4" tabIndex="1"
+                        class=' news_mobilelistitem_4 '>
+                        <h3>Crowdsourcing Developers</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_6 -->
+                    <li class=' news_mobilelistitem_6 '>
+                        <a id="news_mobilelistitem_6" name="mobilelistitem_6" dsid="mobilelistitem_6" tabIndex="1"
+                        class=' news_mobilelistitem_6 '>
+                        <h3>Cloud-Based Project Management</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- mobilefooter -->
+            <div data-role="footer" data-position="fixed" class=" news_mobilefooter" name="mobilefooter"
+            dsid="mobilefooter" id="news_mobilefooter" data-theme="b">
+            </div>
+        </div>
+    </body>
+
+</html>

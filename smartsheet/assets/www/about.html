@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            about
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery-ui-map/jquery.ui.map.full.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/childbrowser.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="about" id="about" class="type-interior"
+        data-theme="b" data-add-back-btn="true" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader"
+            id="about_mobileheader" class=' about_mobileheader '>
+                <h1 dsid="mobileheader">
+                    About
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="about_mobilecontainer" name="mobilecontainer" class=" about_mobilecontainer"
+            dsid="mobilecontainer" data-theme="">
+                <link href="about.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="about.js">
+                </script>
+                <!-- html_12 -->
+                <div name="html_12" dsid="html_12" id="about_html_12" class=" about_html_12">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="td_left">
+                                    Website
+                                </td>
+                                <td class="td_right">
+                                    <a title="smartsheet.com" href="http://www.smartsheet.com/" rel="nofollow" target="_self">smartsheet.com</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">
+                                    Blog
+                                </td>
+                                <td class="td_right">
+                                    <a title="smartsheet.com/blog" href="http://www.smartsheet.com/blog" rel="nofollow"
+                                    target="_self">smartsheet.com/blog</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">
+                                    Twitter
+                                </td>
+                                <td class="td_right">
+                                    <a href="http://twitter.com/smartsheet" rel="nofollow">@smartsheet</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">
+                                    Category
+                                </td>
+                                <td class="td_right">
+                                    <a title="Enterprise" href="http://www.crunchbase.com/companies?q=enterprise">Enterprise</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">
+                                    Phone
+                                </td>
+                                <td class="td_right">
+                                    1 (877) 765-0702
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">
+                                    Email
+                                </td>
+                                <td class="td_right">
+                                    <a title="info@smartsheet.com" href="mailto:%69%6e%66%6f@%73%6d%61%72%74%73%68%65%65%74.%63%6f%6d"
+                                    rel="nofollow">info@smartsheet.com</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">
+                                    &nbsp;
+                                </td>
+                                <td class="td_right">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">
+                                    Founded
+                                </td>
+                                <td class="td_right">
+                                    2005
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">
+                                    Description
+                                </td>
+                                <td class="td_right">
+                                    Project management
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- googlemap_13 -->
+                <div id="about_googlemap_13" dsid="googlemap_13" name="googlemap_13" tiggzitype="object"
+                apperytype="object" class=' about_googlemap_13' style='width:100%;'>
+                    <img class=' about_googlemap_13' src="http://assets1.geocommons.com/d51ab1366bec6a2c4954db979e5921bd4cc140db/images/no_preview_map.png?1311276822"
+                    />
+                </div>
+                <ul data-role="listview" id="about_googlemap_13_markers" name="googlemap_13_markers"
+                dsid="googlemap_13_markers" style="display:none">
+                    <!-- marker_14 -->
+                    <li id="about_marker_14" name="marker_14" dsid="marker_14" tiggzitype="marker" apperytype="marker"
+                    rendered="true" latitude="47.617924" longitude="-122.20048" text="Add Components Here"
+                    address="Bellevue, WA" show_info="true" style="display:none">
+                        <div id="about_marker_14_infoWindow" name="marker_14_infoWindowContent" class='about_marker_14'>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- mobilefooter -->
+            <div data-role="footer" data-position="fixed" class=" about_mobilefooter" name="mobilefooter"
+            dsid="mobilefooter" id="about_mobilefooter" data-theme="b">
+            </div>
+        </div>
+    </body>
+
+</html>
